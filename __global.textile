@@ -11,5 +11,3 @@
   :dropbox: Dropbox setup
   :misc: Misc
   :license: License
-
-++++hu++++

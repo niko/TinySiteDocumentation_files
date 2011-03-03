@@ -4,8 +4,6 @@
 
 ++++body++++
 
-!tinysite.png!
-
 h1. Setting up Dropbox
 
 There are two possibilities to use Dropbox with *TinySite*: a) Just use a subfolder of the /Public folder or b) Use advanced sharing to create a secret link to any other folder. The advantage of the later is that you can easily share it with other people while subfolders of /Public cannot be shared.
@@ -20,11 +18,12 @@ h2. A subfolder of /Public
 h2. Advanced sharing of another folder
 
 * Create a folder for your *TinySite* files anywhere with your Dropbox folder.
-* Activate advanced sharing in Dropbox (if you haven't already). There "some documentation":https://www.dropbox.com/help/167 for that, but basically you can just "click here":https://www.dropbox.com/enable_shmodel.
-* Right-click on the new folder and select 'Get shareable link'. It takes you to a webpage with a URL like this: @https://www.dropbox.com/s/d55gpsn2e4196uh@.
-* Use the URL of this very page as @:file_path@ parameter in your *TinySite* configuration.
-* _DO NOT USE_ the shareable short-link displayed on the page. It looks like this: @http://db.tt/IX8F4bt@. _DO NOT USE_ this link. It will not work.
 * Put the necessary files in it. That's at least @index.textile@ and @__global.textile@. @404.textile@ and @500.textile@ are highly recommended.
+* Activate advanced sharing in Dropbox (if you haven't already). There "some documentation":https://www.dropbox.com/help/167 for that, but basically you can just "click here":https://www.dropbox.com/enable_shmodel.
+* Right-click on the new folder and select 'Get shareable link'. It takes you to a webpage with the folders content.
+* Click on any of the files. It will take you to yet another page with a big "Download some_file.textile" link.
+* Right-click on this download link and choose "Copy link URL" (or whatever it's called in your browser).
+* Use the folder URL of this link as @:file_path@ parameter in your *TinySite* configuration.
 
 h2. Optional:
 
