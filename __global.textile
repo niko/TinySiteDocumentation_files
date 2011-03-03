@@ -8,5 +8,8 @@
   :page_content: The page content files
   :app: The TinySite app
   :caching: Caching
+  :dropbox: Dropbox setup
   :misc: Misc
   :license: License
+
+++++hu++++

@@ -1,0 +1,32 @@
+---
+:title: Setting up Dropbox
+:description: The different possibilities of using Dropbox with TinySite.
+
+++++body++++
+
+!tinysite.png!
+
+h1. Setting up Dropbox
+
+There are two possibilities to use Dropbox with *TinySite*: a) Just use a subfolder of the /Public folder or b) Use advanced sharing to create a secret link to any other folder. The advantage of the later is that you can easily share it with other people while subfolders of /Public cannot be shared.
+
+h2. A subfolder of /Public
+
+* Create the folder within the /Public folder of your Dropbox.
+* Put the necessary files in it. That's at least @index.textile@ and @__global.textile@. @404.textile@ and @500.textile@ are highly recommended.
+* Right-click on any of the files and select 'Copy public link'. It will be something like @http://dl.dropbox.com/u/1343338/tinysitefiles/index.textile@.
+* Use the folder part of this public link as @:file_path@ parameter in your *TinySite* configuration.
+
+h2. Advanced sharing of another folder
+
+* Create a folder for your *TinySite* files anywhere with your Dropbox folder.
+* Activate advanced sharing in Dropbox (if you haven't already). There "some documentation":https://www.dropbox.com/help/167 for that, but basically you can just "click here":https://www.dropbox.com/enable_shmodel.
+* Right-click on the new folder and select 'Get shareable link'. It takes you to a webpage with a URL like this: @https://www.dropbox.com/s/d55gpsn2e4196uh@.
+* Use the URL of this very page as @:file_path@ parameter in your *TinySite* configuration.
+* _DO NOT USE_ the shareable short-link displayed on the page. It looks like this: @http://db.tt/IX8F4bt@. _DO NOT USE_ this link. It will not work.
+* Put the necessary files in it. That's at least @index.textile@ and @__global.textile@. @404.textile@ and @500.textile@ are highly recommended.
+
+h2. Optional:
+
+* Create a subfolder of your *TinySite*-files folder named @images@.
+
