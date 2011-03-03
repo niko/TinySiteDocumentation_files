@@ -17,7 +17,7 @@ run TinySite.new :file_path => 'http://dl.dropbox.com/u/[user_id]/my_site'
 
 The file path would be the folder in which the _page content files_ are available. Other supported parameters are @:image_path@ (defaults to @[file_path]/images@) and @cache_buster@ (a query string with which you can bust the internal cache and prevent HTTP caching for the given site). The @:image_path@ helps to keep urls of images in your textile short. Image tags which don't start with 'http://' or '/' will be prefixed by the @:image_path@.
 
-Of course you will want to serve some assets, too. Given this files and folders:
+Of course you will want to serve some assets, too. Given these files and folders:
 
 <pre><code>config.ru
 layout.haml
@@ -42,5 +42,5 @@ run TinySite.new :cache_buster => 'preview',
                  :file_extension => :txt
 </code></pre>
 
-The file_extension is configurable if you need to use an editor that doesn't want to edit .textile files. Such as some smartphone dropbox clients which can only edit .txt files or the "TextDrop":http://textdropapp.com/ web client. I tried "Droptext for iPhone":http://itunes.apple.com/us/app/droptext-a-text-editor-for/id371880635?mt=8 and it works nicely! .textile can be added to the known extensions.
+The file_extension is configurable in case you need to use an editor that cannot edit .textile files. Some smartphone dropbox clients can only edit .txt files, like the "TextDrop":http://textdropapp.com/ web client. I tried "Droptext for iPhone":http://itunes.apple.com/us/app/droptext-a-text-editor-for/id371880635?mt=8 and it works nicely! The textile extension can be added to the known extensions.
 

@@ -18,6 +18,6 @@ With the Heroku/Dropbox combination TinySite provides:
 * Easy drag and drop image (and other asset) upload.
 * Edit page form your iPhone or Android phone (via Dropbox edit app).
 * An own Heroku subdomain (and it's cheap to register an own domain for it).
-* Take full advantage of Herokus caching infrastructure.
+* Take full advantage of Heroku's caching infrastructure.
 
 So how does it work?

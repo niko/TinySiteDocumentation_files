@@ -20,7 +20,7 @@ Run it:
 
 <pre><code>rackup config.ru</code></pre>
 
-h2. Use this very app as example
+h2. Use this very app as a blueprint
 
 To get started you can check out the TinySite documentation app:
 
@@ -39,16 +39,16 @@ git clone git://github.com/niko/TinySite_documentation_files.git
 
 Change the name of the checked out folder to your liking.
 
-Then open the Dropbox website and copy the public link to the newly created folder. Enter the name of the folder as the @:file_path@ parameter in @config.ru@. Push to heroku:
+Then open the Dropbox website and copy the public link into the newly created folder. Enter the name of the folder as the @:file_path@ parameter in @config.ru@. Push to heroku:
 
 <pre><code>git push heroku master</code></pre>
 
 h2. After testing
 
-If you created a test app on heroku you should perhaps destroy it afterwards:
+If you created a test app on heroku you should destroy it afterwards:
 
 <pre><code>heroku destroy --confirm your-new-shiny-site</code></pre>
 
 h2. Further steps
 
-* Adopt and add layout, styles, javascript
+* Adopt and add layout, styles, javascript.
