@@ -1,0 +1,46 @@
+---
+:title: The TinySite app
+:description: The TinySite app is a simple and small (130LOC) ruby rack application.
+
+++++body++++
+
+h1. The TinySite app
+
+The app itself is really, really simple. All you need to get started is a @config.ru@ file:
+
+<pre><code>require 'tiny_site'
+
+use Rack::ContentLength
+
+run TinySite.new :file_path => 'http://dl.dropbox.com/u/[user_id]/my_site'
+</code></pre>
+
+The file path would be the folder in which the _page content files_ are available. Other supported parameters are @:image_path@ (defaults to @[file_path]/images@) and @cache_buster@ (a query string with which you can bust the internal cache and prevent HTTP caching for the given site). The @:image_path@ helps to keep urls of images in your textile short. Image tags which don't start with 'http://' or '/' will be prefixed by the @:image_path@.
+
+Of course you will want to serve some assets, too. Given this files and folders:
+
+<pre><code>config.ru
+layout.haml
+public/
+  javascript/
+    my.js
+  stylesheets/
+    my.css
+</code></pre>
+
+In this case the @config.ru@ will more look like this:
+
+<pre><code>require 'tiny_site'
+
+use Rack::CommonLogger
+use Rack::ContentLength
+use Rack::Static, :urls => ['/stylesheets','/javascript'], :root => 'public'
+
+run TinySite.new :cache_buster => 'preview',
+                 :file_path => 'http://dl.dropbox.com/u/1343338/a_test',
+                 :image_path => 'http://dl.dropbox.com/u/1343338/a_test/images',
+                 :file_extension => :txt
+</code></pre>
+
+The file_extension is configurable if you need to use an editor that doesn't want to edit .textile files. Such as some smartphone dropbox clients which can only edit .txt files or the "TextDrop":http://textdropapp.com/ web client. I tried "Droptext for iPhone":http://itunes.apple.com/us/app/droptext-a-text-editor-for/id371880635?mt=8 and it works nicely! .textile can be added to the known extensions.
+

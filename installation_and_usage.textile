@@ -1,0 +1,54 @@
+---
+:title: TinySite installation and usage
+:description: Installation and usage instructions TinySite
+
+++++body++++
+
+h1. Installation and Usage
+
+In your shell:
+
+<pre><code>gem install tiny_site</code></pre>
+
+In the config.ru of your Rack application
+
+<pre><code>require 'tiny_site'
+run TinySite.new :file_path => 'http://dl.dropbox.com/u/[user_id]/[path_to_files]'
+</code></pre>
+
+Run it:
+
+<pre><code>rackup config.ru</code></pre>
+
+h2. Use this very app as example
+
+To get started you can check out the TinySite documentation app:
+
+<pre><code>git clone git://github.com/niko/TinySite_documentation_app.git
+cd TinySite_documentation_app
+heroku create your-new-shiny-site --stack bamboo-mri-1.9.2
+git push heroku master
+heroku open
+</code></pre>
+
+h2. Change the content of the pages
+
+<pre><code>cd ~/Dropbox/Public/
+git clone git://github.com/niko/TinySite_documentation_files.git
+</code></pre>
+
+Change the name of the checked out folder to your liking.
+
+Then open the Dropbox website and copy the public link to the newly created folder. Enter the name of the folder as the @:file_path@ parameter in @config.ru@. Push to heroku:
+
+<pre><code>git push heroku master</code></pre>
+
+h2. After testing
+
+If you created a test app on heroku you should perhaps destroy it afterwards:
+
+<pre><code>heroku destroy --confirm your-new-shiny-site</code></pre>
+
+h2. Further steps
+
+* Adopt and add layout, styles, javascript

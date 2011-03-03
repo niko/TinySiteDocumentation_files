@@ -1,0 +1,6 @@
+---
+:title: Server Error
+
+++++body++++
+
+h1. Something went wrong

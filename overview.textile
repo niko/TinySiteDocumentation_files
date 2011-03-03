@@ -1,0 +1,23 @@
+---
+:title: TinySite overview
+:description: 
+
+++++body++++
+
+h1. TinySite overview
+
+TinySite itself is a tiny (hence the name) pure Rack application, sporting a mere 130 LOC.
+
+As already stated TinySite was designed with Heroku and Dropbox in mind. But of course TinySite will work at any other "Ruby":http://www.ruby-lang.org hoster as well and is easy to be self hosted (it's just "Rack":http://rack.rubyforge.org). And of course any other HTTP server or even local files will work for the content.
+
+With the Heroku/Dropbox combination TinySite provides:
+
+* Easy local editing of "YAML":http://en.wikipedia.org/wiki/YAML & "Textile":http://en.wikipedia.org/wiki/Textile_(markup_language) based _page content files_.
+* Versioning of _page content files_.
+* Give other people access to edit all pages or just some (via Dropbox folder sharing).
+* Easy drag and drop image (and other asset) upload.
+* Edit page form your iPhone or Android phone (via Dropbox edit app).
+* An own Heroku subdomain (and it's cheap to register an own domain for it).
+* Take full advantage of Herokus caching infrastructure.
+
+So how does it work?

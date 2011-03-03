@@ -1,0 +1,33 @@
+---
+:title: The TinySite layouts
+:description: 
+
+++++body++++
+
+h2. The TinySite layouts
+
+Each page is rendered into a "HAML":http://haml-lang.com layout file. The parts of the page and a set of variables are provided by the page itself and a _global content file_. The layout file should be located next to the rackup file @config.ru@ and defaults to @layout.haml@. The layout file is configurable via @page[:layout]@ and @global[:layout]@.
+
+A minimal @layout.haml@ could look like this:
+
+<pre><code>!!!
+%html{:lang => "de"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title= page[:title] || global[:title]
+    %link{:href => "/stylesheets/styles.css"}
+  %body
+    %header
+    %h1 Some title
+    %nav
+      ~ global['navigation']
+    %aside
+      ~ page['sidebar']
+    %section
+      ~ page['body']
+    %footer
+</code></pre>[1]
+
+Note the use of @page[:title]@, @global[:title]@, @global['navigation']@, @page['sidebar']@ and @page['body']@. These variables are defined via...
+
+fn1. Also note the usage of @~@ as the HAML evaluation method. This prevents indentation. It's needed if you have code blocks (or other whitespace sensitive tags) in your Textile.

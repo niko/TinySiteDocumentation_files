@@ -1,0 +1,12 @@
+---
+:title: TinySite documentation
+:navigation:
+  :index: Home
+  :installation_and_usage: Installation and Usage
+  :overview: Overview
+  :layouts: The layouts
+  :page_content: The page content files
+  :app: The TinySite app
+  :caching: Caching
+  :misc: Misc
+  :license: License

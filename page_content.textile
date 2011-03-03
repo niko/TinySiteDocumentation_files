@@ -1,0 +1,50 @@
+---
+:title: The TinySite page content format
+:description: Textile and YAML are the foundation of TinySites page content format.
+
+++++body++++
+
+h1. The TinySite page content format
+
+... are based on a YAML header a several Textile body parts. A simple one would look like this:
+
+<pre><code>---
+:title: My Page
+:description: It's uber-awesome!
+
+++++sidebar++++ 
+
+!some.png!
+
+Orem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+++++body++++ 
+
+h1. Hey, Dude!
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</code></pre>[1]
+
+This gives the layout access to these variables: @page[:title]@, @page[:description]@, @page['sidebar']@ and @page['body']@.
+
+Analog to the @page@ variables the @global@ variables are set via the content of the @__global.textile@ file. A typical one would perhaps look like this:
+
+<pre><code>---
+:keywords: bla, blub, ...
+
+++++navigation++++ 
+
+* "Home":/
+* "One":one
+</code></pre>[1]
+
+With this in place the layout has access to these variables: @global[:keywords]@ and @global['navigation']@. The @__global@ file would be the place to add a footer, too.
+
+The filenames derive directly from the path. Subfolders are supported. With the above navigation in place you would need an @index.textile@ file and a @one.textile@ file next to your @__global.textile@ file.
+
+Besides the @page@ and the @global@ variable the layout hast access to a @env@ hash containing the current path and the current query string: @env[:path]@ and @env[:query_string]@.
+
+fn1. Note that I added a single whitespace to the end of the ++++variable++++ declaration lines to prevent TinySite from parsing the lines. If you copy the code you have to remove the whitespace.
+
