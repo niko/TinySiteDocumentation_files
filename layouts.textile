@@ -4,7 +4,7 @@
 
 ++++body++++
 
-h2. The TinySite layouts
+h1. The *TinySite* layouts
 
 Each page is rendered into a "HAML":http://haml-lang.com layout file. The parts of the page and a set of variables are provided by the page itself and a _global content file_. The layout file should be located next to the rackup file @config.ru@ and defaults to @layout.haml@. The layout file is configurable via @page[:layout]@ and @global[:layout]@.
 

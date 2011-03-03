@@ -22,7 +22,7 @@ Run it:
 
 h2. Use this very app as a blueprint
 
-To get started you can check out the TinySite documentation app:
+To get started you can check out the *TinySite* documentation app:
 
 <pre><code>git clone git://github.com/niko/TinySite_documentation_app.git
 cd TinySite_documentation_app

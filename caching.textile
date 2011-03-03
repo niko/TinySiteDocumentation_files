@@ -6,7 +6,7 @@
 
 h1. Caching
 
-TinySite adds HTTP caching headers to support Heroku's Varnish cache. In addition to that, fetched textile files are cached in-app for up to one hour. 
+*TinySite* adds HTTP caching headers to support Heroku's Varnish cache. In addition to that, fetched textile files are cached in-app for up to one hour. 
 
 You can bust the cache by adding a configurable cache-busting query string. By default it's @bust@. To avoid caching, you just add it to the URL like this: @http://foo/bar?bust@. In addition to clearing the internal cache this adds a cache-control header to prevent caching in any HTTP cache between you and the app.
 
