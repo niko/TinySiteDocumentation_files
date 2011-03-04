@@ -11,6 +11,8 @@ h2. ToDo
 * More robust parsing error handling
 * Test helpers for layout-testing
 * Perhaps add a helper for the layout?
+* Documentation about usage with Rails and Sinatra
+* Documentation about pimping *TinySite* with various Rack middleware
 
 h2. Credits
 
