@@ -44,7 +44,7 @@ With this in place the layout has access to these variables: @global[:keywords]@
 
 The filenames derive directly from the path. Subfolders are supported. With the above navigation in place you would need an @index.textile@ file and a @one.textile@ file next to your @__global.textile@ file.
 
-Besides the @page@ and the @global@ variable the layout hast access to a @env@ hash containing the current path and the current query string: @env[:path]@ and @env[:query_string]@.
+Besides the @page@ and the @global@ variable the layout has access to @#request_path@, @#query_string@, @#file_url_for@, @#image_url_for@. See "the view helpers page":view_helpers for more details.
 
 fn1. Note that I added a single whitespace to the end of the ++++variable++++ declaration lines to prevent *TinySite* from parsing the lines. If you copy the code you have to remove the whitespace.
 fn2. Also note that I added a @/@ in front of the image path for the very same reason. You can just use relative paths for the images in your /images folder.

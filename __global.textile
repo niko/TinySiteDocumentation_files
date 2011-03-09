@@ -1,13 +1,14 @@
 ---
 :title: TinySite documentation
 :navigation:
-  :index: Home
-  :installation_and_usage: Installation and Usage
-  :overview: Overview
-  :layouts: The layouts
-  :page_content: The page content files
-  :app: The TinySite app
-  :caching: Caching
-  :dropbox: Dropbox setup
-  :misc: Misc
-  :license: License
+  /: Home
+  /installation_and_usage: Installation and Usage
+  /overview: Overview
+  /layouts: The layouts
+  /page_content: The page content files
+  /app: The TinySite app
+  /view_helpers: View helpers in TinySite
+  /caching: Caching
+  /dropbox: Dropbox setup
+  /misc: Misc
+  /license: License

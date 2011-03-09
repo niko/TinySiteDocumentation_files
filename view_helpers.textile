@@ -1,0 +1,54 @@
+---
+:title: The TinySite view helpers
+:description: 
+
+++++body++++
+
+h1. *TinySite* view helpers
+
+As of version 0.2.1 of *TinySite* the layout gets rendered in the context of a dedicated view object. To add your own view helpers, just reopen the view class in your config.ru (or any required file).
+
+In the view these methods are available: @#request_path@, @#query_string@, @#global@, @#page@, @#file_url_for@, @#image_url_for@. You can use these directly in the layout or in your own view helpers.
+
+The *TinySite* documentation app (this app) sports two helpers, more or less as demo for your own helpers: A naive implementation of a navigation renderer and a railsesque link_to helper. They are implemented right in the "config.ru":https://github.com/niko/TinySiteDocumentation_app/blob/master/config.ru:
+
+<pre><code>class TinySite::View
+  def link_to(url, name=url, opts={})
+    opts, name = name, url if name.is_a? Hash
+    
+    o = opts.map{|k,v| %Q{ #{k}="#{v}"} }.join
+    
+    %Q{<a href="#{url}"#{o}>#{name}</a>}
+  end
+  
+  def navigation
+    lis = global[:navigation].map do |url,name|
+      opts  = {}
+      
+      opts.update({:class => 'active'}) if request_path==url
+      
+      %Q{  <li>#{link_to url, name, opts}</li>\n}
+    end
+    
+    %Q{<ul>\n#{lis.join}</ul>\n}
+  end
+end
+</code></pre>
+
+The navigation helper renders the YAML navigation of the @__global@ file into an unordered list:
+
+<pre><code>---
+:title: TinySite documentation
+:navigation:
+  /: Home
+  /installation_and_usage: Installation and Usage
+  /overview: Overview
+  /layouts: The layouts
+  /page_content: The page content files
+  /app: The TinySite app
+  /caching: Caching
+  /dropbox: Dropbox setup
+  /misc: Misc
+  /license: License
+</code></pre>
+

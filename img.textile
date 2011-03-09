@@ -1,0 +1,9 @@
+---
+:title: TinySite image demo
+:description: 
+
+++++body++++
+
+h1. *TinySite* image demo
+
+!tinysite.png!

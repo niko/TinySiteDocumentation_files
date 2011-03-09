@@ -9,8 +9,9 @@ h1. Miscellaneous
 h2. ToDo
 
 * More robust parsing error handling
+* Make use of Dropbox's etag header
+* Move the caching from the http request to the rendering methods
 * Test helpers for layout-testing
-* Perhaps add a helper for the layout?
 * Documentation about usage with Rails and Sinatra
 * Documentation about pimping *TinySite* with various Rack middleware
 
