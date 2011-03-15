@@ -24,7 +24,7 @@ h2. Use this very app as a blueprint
 
 To get started you can check out the *TinySite* documentation app:
 
-<pre><code>git clone git://github.com/niko/TinySite_documentation_app.git
+<pre><code>git clone git://github.com/niko/TinySiteDocumentation_app.git
 cd TinySite_documentation_app
 heroku create your-new-shiny-site --stack bamboo-mri-1.9.2
 git push heroku master
@@ -34,7 +34,7 @@ heroku open
 h2. Change the content of the pages
 
 <pre><code>cd ~/Dropbox/Public/
-git clone git://github.com/niko/TinySite_documentation_files.git
+git clone git://github.com/niko/TinySiteDocumentation_files.git
 </code></pre>
 
 Change the name of the checked out folder to your liking.

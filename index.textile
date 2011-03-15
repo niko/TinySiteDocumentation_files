@@ -14,4 +14,4 @@ If you like *TinySite* and don't have a Dropbox account already: Supporting this
 
 If you use *TinySite* I'd love to refer to it in a (yet to be added) *TinySite in the wild* section.
 
-*TinySite* is "on github.com":https://github.com/niko/TinySite and on "rubygems.org":https://rubygems.org/gems/tiny_site.
+*TinySite* is "on github.com":https://github.com/niko/TinySite and "on rubygems.org":https://rubygems.org/gems/tiny_site.
