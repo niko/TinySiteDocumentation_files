@@ -1,0 +1,23 @@
+---
+:title: The TinySite middleware
+:description: TinySite middleware usage
+
+++++body++++
+
+h1. Using Rack middleware with *TinySite*
+
+If you don't know, what "Rack middleware" even means head over to the "Railscasts":http://railscasts.com/episodes/151-rack-middleware right now! Basically middlewares allow you to modify requests on their way to and responses on their way from any Rack based webapp. You definitely should use @Rack::ContentLength@[1] with *TinySite* or it's responses won't even be valid HTTP. @Rack::Static@[1] is highly recommended for handling your assets like css and javascript files. I combined it with "@Rack::Rewrite@":https://github.com/jtrupiano/rack-rewrite to provide a @favicon.ico@ and a @robots.txt@ on root level. @Rack::CommonLogger@[1] is useful to have any log output.
+
+The complete middleware configuration of this very app looks somewhat like this:
+
+<pre><code>use Rack::Runtime
+use Rack::CommonLogger
+use Rack::ContentLength
+use Rack::Rewrite do
+  rewrite '/robots.txt', '/static/robots.txt'
+  rewrite '/favicon.ico', '/static/favicon.ico'
+end
+use Rack::Static, :urls => ['/stylesheets','/javascript','/static'], :root => 'public'
+</code></pre>
+
+fn1. Part of Rack

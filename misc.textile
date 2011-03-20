@@ -13,7 +13,6 @@ h2. ToDo
 * Move the caching from the http request to the rendering methods
 * Test helpers for layout-testing
 * Documentation about usage with Rails and Sinatra
-* Documentation about pimping *TinySite* with various Rack middleware
 
 h2. Credits
 

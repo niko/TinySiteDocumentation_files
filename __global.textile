@@ -10,5 +10,6 @@
   /view_helpers: View helpers in TinySite
   /caching: Caching
   /dropbox: Dropbox setup
+  /middleware: Middleware & TinySite
   /misc: Misc
   /license: License

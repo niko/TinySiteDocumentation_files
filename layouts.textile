@@ -1,6 +1,6 @@
 ---
 :title: The TinySite layouts
-:description: 
+:description: TinySite layouts
 
 ++++body++++
 
